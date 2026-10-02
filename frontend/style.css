@@ -1,0 +1,111 @@
+:root {
+    --bg-color: #121212;
+    --card-bg: #1e1e1e;
+    --text: #ffffff;
+    --text-muted: #aaaaaa;
+    --border: #333333;
+    --positive: #4caf50;
+    --negative: #f44336;
+    --accent: #2196f3;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text);
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: var(--card-bg);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    margin: 0 0 5px 0;
+    color: var(--accent);
+}
+
+p {
+    margin: 0 0 20px 0;
+    color: var(--text-muted);
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+input {
+    flex: 1;
+    padding: 10px 15px;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    background-color: var(--bg-color);
+    color: var(--text);
+    font-size: 16px;
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: var(--accent);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn.active {
+    background-color: #e91e63;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+}
+
+th {
+    color: var(--text-muted);
+    font-weight: normal;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.positive { color: var(--positive); }
+.negative { color: var(--negative); }
+
+.star-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: var(--border);
+}
+
+.star-btn.active {
+    color: #ffc107;
+}
+
+.loading {
+    text-align: center;
+    color: var(--text-muted);
+}

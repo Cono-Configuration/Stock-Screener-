@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Stock Screener</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Stock Screener</h1>
+            <p>Simple real-time stock tracker</p>
+            
+            <div class="controls">
+                <input type="text" id="search-input" placeholder="Search Symbol (e.g., AAPL)">
+                <button id="watchlist-toggle" class="btn">Show Watchlist</button>
+            </div>
+        </header>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Symbol</th>
+                    <th>Current Price</th>
+                    <th>Change</th>
+                    <th>Change %</th>
+                    <th>Watchlist</th>
+                </tr>
+            </thead>
+            <tbody id="stock-table-body">
+                <!-- Data populated by JavaScript -->
+                <tr><td colspan="5" class="loading">Loading stock data...</td></tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

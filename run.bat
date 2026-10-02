@@ -1,0 +1,6 @@
+@echo off
+echo Compiling Server.java...
+javac Server.java
+echo Starting Simple Java Backend...
+java Server
+pause
