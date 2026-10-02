@@ -9,28 +9,34 @@
 <body>
     <div class="container">
         <header>
-            <h1>Stock Screener</h1>
-            <p>Simple real-time stock tracker</p>
+            <h1>Stock Watchlist</h1>
+            <p>Search for a company to track its live price</p>
             
-            <div class="controls">
-                <input type="text" id="search-input" placeholder="Search Symbol (e.g., AAPL)">
-                <button id="watchlist-toggle" class="btn">Show Watchlist</button>
+            <div class="search-box">
+                <input type="text" id="search-input" placeholder="Search Company (e.g., Apple)">
+                <button id="search-btn" class="btn">Search</button>
+            </div>
+            
+            <!-- Search Results will appear here -->
+            <div id="search-results" class="search-results hidden">
+                <h3>Search Results</h3>
+                <ul id="results-list"></ul>
             </div>
         </header>
 
+        <h2>My Watchlist</h2>
         <table>
             <thead>
                 <tr>
-                    <th>Symbol</th>
+                    <th>Company</th>
                     <th>Current Price</th>
                     <th>Change</th>
                     <th>Change %</th>
                     <th>Watchlist</th>
                 </tr>
             </thead>
-            <tbody id="stock-table-body">
-                <!-- Data populated by JavaScript -->
-                <tr><td colspan="5" class="loading">Loading stock data...</td></tr>
+            <tbody id="watchlist-table-body">
+                <tr><td colspan="5" class="loading">Your watchlist is empty. Search above to add stocks!</td></tr>
             </tbody>
         </table>
     </div>

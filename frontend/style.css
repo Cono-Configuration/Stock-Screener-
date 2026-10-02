@@ -27,12 +27,11 @@ body {
 }
 
 header {
-    text-align: center;
     margin-bottom: 30px;
 }
 
-h1 {
-    margin: 0 0 5px 0;
+h1, h2, h3 {
+    margin: 0 0 10px 0;
     color: var(--accent);
 }
 
@@ -41,9 +40,8 @@ p {
     color: var(--text-muted);
 }
 
-.controls {
+.search-box {
     display: flex;
-    justify-content: space-between;
     gap: 15px;
     margin-bottom: 20px;
 }
@@ -68,10 +66,59 @@ input {
     font-size: 16px;
 }
 
-.btn.active {
-    background-color: #e91e63;
+.btn:hover {
+    opacity: 0.9;
 }
 
+/* Search Results Area */
+.search-results {
+    background-color: var(--bg-color);
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 30px;
+}
+
+.hidden {
+    display: none;
+}
+
+#results-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#results-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid var(--border);
+}
+#results-list li:last-child {
+    border-bottom: none;
+}
+
+.result-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.add-btn {
+    background-color: var(--positive);
+    color: white;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.add-btn.added {
+    background-color: var(--border);
+    cursor: not-allowed;
+}
+
+/* Table */
 table {
     width: 100%;
     border-collapse: collapse;
